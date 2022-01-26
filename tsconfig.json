@@ -1,6 +1,18 @@
 {
   "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist"
-  }
+    "outDir": "dist",
+    "declaration": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "lib": [
+      "es2018",
+    ],
+    "importHelpers": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+  ]
 }
