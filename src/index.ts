@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useCallback } from 'react'
 
 type useRegexState = [
   isMatch: boolean,
@@ -16,11 +16,15 @@ export default function useRegex(regex: RegExp, targetString: string): useRegexS
     targetString.search(regex)
   ), [regex, targetString])
 
-  const replace = (replaceValue: string): string => {
-    return useMemo(() => (
-      targetString.replace(regex, replaceValue)
-    ), [regex, targetString, replaceValue])
-  }
+  // const replace = (replaceValue: string): string => {
+  //   return useMemo(() => (
+  //     targetString.replace(regex, replaceValue)
+  //   ), [regex, targetString, replaceValue])
+  // }
+
+  const replace = useCallback((replaceValue: string): string => (
+    targetString.replace(regex, replaceValue)
+  ), [regex, targetString])
 
   return [
     isMatch,
