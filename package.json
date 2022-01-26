@@ -1,0 +1,42 @@
+{
+  "name": "@isaackwok/react-use-regex",
+  "version": "0.0.1",
+  "description": "A react hook for processing regular expressions.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "build": "tsc --declaration"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaackwok/react-use-regex.git"
+  },
+  "keywords": [
+    "regex",
+    "react",
+    "hook",
+    "use-regex",
+    "regular expression",
+    "string"
+  ],
+  "author": "Isaac Kwok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaackwok/react-use-regex/issues"
+  },
+  "homepage": "https://github.com/isaackwok/react-use-regex#readme",
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/eslint-parser": "^7.16.5",
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/react": "^17.0.38",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "eslint": "^8.7.0",
+    "typescript": "^4.5.5"
+  }
+}
