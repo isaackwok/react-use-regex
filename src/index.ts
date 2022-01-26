@@ -1,10 +1,10 @@
-import { useMemo, useCallback } from 'react'
+import { useMemo } from 'react'
 
 type useRegexState = [
   isMatch: boolean,
   matches: RegExpMatchArray | null,
   indexOfFirstMatch: number,
-  replace: (replaceValue: string) => () => string
+  replace: (replaceValue: string) => string
 ]
 
 export default function useRegex(regex: RegExp, targetString: string): useRegexState {
@@ -16,8 +16,8 @@ export default function useRegex(regex: RegExp, targetString: string): useRegexS
     targetString.search(regex)
   ), [regex, targetString])
 
-  function replace(replaceValue: string) {
-    return useCallback(() => (
+  function replace(replaceValue: string): string {
+    return useMemo(() => (
       targetString.replace(regex, replaceValue)
     ), [regex, targetString, replaceValue])
   }
