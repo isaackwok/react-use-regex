@@ -1,5 +1,5 @@
 {
-  "name": "@isaackwok/react-use-regex",
+  "name": "react-use-regex",
   "version": "0.0.1",
   "description": "A react hook for processing regular expressions.",
   "main": "dist/index.js",
