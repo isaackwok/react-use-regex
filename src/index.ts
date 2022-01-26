@@ -16,7 +16,7 @@ export default function useRegex(regex: RegExp, targetString: string): useRegexS
     targetString.search(regex)
   ), [regex, targetString])
 
-  function replace(replaceValue: string): string {
+  const replace = (replaceValue: string): string => {
     return useMemo(() => (
       targetString.replace(regex, replaceValue)
     ), [regex, targetString, replaceValue])
