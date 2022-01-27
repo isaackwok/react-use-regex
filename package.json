@@ -1,6 +1,6 @@
 {
   "name": "react-use-regex",
-  "version": "0.0.2",
+  "version": "0.0.2a",
   "description": "A react hook for processing regular expressions.",
   "main": "dist/index.js",
   "scripts": {
