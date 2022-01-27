@@ -22,12 +22,12 @@ function MyComponent() {
     matches, 
     indexOfFirstMatch, 
     replace
-  ] = useRegex(/R.*?x/i, "Hello, Regex!")
+  ] = useRegex(/R.*?x/i, 'Hello, Regex!')
 
   // isMatch: true
-  // matches: Regex
+  // matches: ['Regex']
   // indexOfFirstMatch: 7
-  // replace("World") => Hello, World!
+  // replace('World') => 'Hello, World!'
 
   return (
     <h1>...</h1>
